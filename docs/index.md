@@ -1,11 +1,11 @@
 <img src="images/logo.svg" alt="logo" width="200"/>
 
-# RedisBloom - Probabilistic Datatypes Module for Redis
+# RedisBloom: Probabilistic Datatypes for Redis
 [![Forum](https://img.shields.io/badge/Forum-RedisBloom-blue)](https://forum.redislabs.com/c/modules/redisbloom)
 [![Gitter](https://badges.gitter.im/RedisLabs/RedisBloom.svg)](https://gitter.im/RedisLabs/RedisBloom?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-RedisBloom module provides four datatypes, a Scalable **Bloom Filter** and **Cuckoo Filter**, a **Count-Mins-Sketch** and a **Top-K**.
-**Bloom and Cuckoo filters** are used to determine (with a given degree of certainty) whether an item is present or absent from a collection. While **Count-Min Sketch** is used to approximate count of items in sub-linear space and **Top-K** maintains a list of K most frequent items.
+The RedisBloom module provides four probabilistic data types: a scalable **Bloom filter**, a **cuckoo filter**, a **count-min-sketch**, and a **top-k**.
+**Bloom and cuckoo filters** are used to determine (with a given degree of certainty) whether an item is present in a collection. A **count-min sketch** is used to approximately count items in sub-linear space. A **top-k** maintains a list of the _k_ most frequent items.
 
 ## Quick Start Guide
 1. [Quick Start](Quick_Start.md)
@@ -24,8 +24,8 @@ Detailed command references for each data structure:
 
 ## Bloom vs. Cuckoo
 Bloom Filters typically exhibit better performance and scalability when inserting
-items (so if you're often adding items to your dataset then Bloom may be ideal),
-whereas Cuckoo Filters are quicker on check operations and also allow deletions.
+items (so if you're often adding items to your dataset, then Bloom filter may be ideal),
+whereas cuckoo filters are quicker on check operations. Cuckoo filters also allow deletions.
 
 ## Client libraries
 Each driver comes with its own documentation in the Readme of the driver repo.
